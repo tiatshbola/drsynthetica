@@ -81,7 +81,7 @@ Features include:
 
 ### Original Prototype
 
-`sketch.original.js`
+`p5.js`
 
 The original version:
 
