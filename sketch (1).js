@@ -51,13 +51,13 @@ function setup() {
 
   // createCapture's 2nd arg is a getUserMedia constraints object, NOT { flipped }.
   // (Flipping is handled by ml5's imageClassifier { flipped: true } in preload.)
-  video = createCapture(
-    { video: true, audio: false },
-    () => {                       // success: camera is live
-      detectedEl && detectedEl.html("Camera ready — analysing…");
-      classifier.classifyStart(video, gotResult);
-    }
-  );
+video = createCapture(
+  { video: true, audio: false },
+  () => {
+    console.log("CAMERA STARTED");
+    detectedEl && detectedEl.html("Camera ready");
+  }
+);
   video.size(560, 420);
   video.hide();
 
